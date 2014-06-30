@@ -52,7 +52,7 @@ Class Utils {
 
 	public static function build($params){
 		$url = self::$config['baseUrl'];
-		$path = buildRoute(self::$routes[$params['page']], $params['params']);
+		$path = self::buildRoute(self::$routes[$params['page']]['pattern'], $params['params']);
 		if(self::$config['path'] == 'get'){
 			$get = isset($params['get'])?$params['get']:array();
 			$get['path'] = $path;
