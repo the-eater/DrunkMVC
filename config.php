@@ -17,7 +17,7 @@ $config['db'] = array(
 
 /**
  * Options: rewrite, path, get
- * Rewrite: /go/home (you need a rewrite to ?path=/user/l33t)
+ * Rewrite: /go/home (you need a rewrite to ?path=/go/home)
  * Path: index.php/go/home
  * Get: index.php?path=/go/home
  */
