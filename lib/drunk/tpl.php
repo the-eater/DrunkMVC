@@ -10,7 +10,11 @@ class DrunkTemplate {
     public function __construct($templateDir) {
         $this->templateDir = $templateDir;
     }
-    public function render($templateFile) {
+    public function render($templateFile,$wrapper=false) {
+        if($wrapper !== false){
+            $this->innerTemplate = $templateFile;
+            $templateFile = $wrapper;
+        }
         if (file_exists($this->templateDir .'/' . $templateFile . '.php')) {
             include $this->templateDir . '/' . $templateFile .'.php';
         } else {

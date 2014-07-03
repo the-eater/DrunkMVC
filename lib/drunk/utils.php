@@ -8,7 +8,7 @@ Class Utils {
 	public static $db;
 
 	public static function route(){
-		$path = self::$config['path'] == "path"?$_SERVER['PATH_INFO']:$_GET['path'];
+		$path = self::$config['path'] == "path"?$_SERVER['PATH_INFO']:isset($_GET['path'])?$_GET['path']:'/';
 		if($path == '/' || $path == ''){
 			return array(
 				"page"=>"index",
